@@ -19,4 +19,5 @@ When the div is shrinking the class of "full-screen" is removed and a class of "
 Here are a couple of examples of how you could potentially use this.
 
 Modaly thing: https://codepen.io/colinlohner/pen/pwGozJ
+
 Lightbox: https://codepen.io/colinlohner/pen/YQgXzq?editors=1100
