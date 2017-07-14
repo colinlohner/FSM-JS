@@ -14,3 +14,9 @@ When I was making this I tried to make it as simple to use as possible. Simply i
 When the div is growing there is a class of "growing" added to the div. Once the div reaches 100vh and 100vw a class of "full-screen" is added to the div and the class "growing" is removed.
 
 When the div is shrinking the class of "full-screen" is removed and a class of "shrinking" is added. Once the div reaches the original size, it only has the "fsm" class and any other classes you may have added to the div.
+
+### Examples:
+Here are a couple of examples of how you could potentially use this.
+
+Modaly thing: https://codepen.io/colinlohner/pen/pwGozJ
+Lightbox: https://codepen.io/colinlohner/pen/YQgXzq?editors=1100
