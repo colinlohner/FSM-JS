@@ -1,4 +1,4 @@
-# fsm.js
+# FSM JS
 ### A javascript library for creating divs that expand to fill the screen when they are clicked on
 
 
@@ -18,6 +18,6 @@ When the div is shrinking the class of "full-screen" is removed and a class of "
 ### Examples:
 Here are a couple of examples of how you could potentially use this.
 
-Modaly thing: https://codepen.io/colinlohner/pen/pwGozJ
+[Modaly thing](https://codepen.io/colinlohner/pen/pwGozJ)
 
-Lightbox: https://codepen.io/colinlohner/pen/YQgXzq?editors=1100
+[Lightbox](https://codepen.io/colinlohner/pen/YQgXzq?editors=1100)
