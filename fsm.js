@@ -13,21 +13,27 @@ var size = {};
 //modal action stuffs
 var openFSM = function(event) {
 	var $this = event.currentTarget;
-	position = $this.getBoundingClientRect();
+    var clientRect = $this.getBoundingClientRect();
+    position = {
+        top: $this.getBoundingClientRect().top - document.body.getBoundingClientRect().top,
+        left: clientRect.left
+    }
+
 	size = {
 		width: window.getComputedStyle($this).width,
 		height: window.getComputedStyle($this).height
 	}
 	
 	$fsmActual.style.position = "absolute";
-	$fsmActual.style.top = position.top + 'px';
+    $fsmActual.style.top = position.top + 'px';
 	$fsmActual.style.left = position.left + 'px';
 	$fsmActual.style.height = size.height;
 	$fsmActual.style.width = size.width;
-	$fsmActual.style.margin = $this.style.margin;
+    $fsmActual.style.margin = $this.style.margin;
+    document.body.classList.add('no-scroll');
 	
 	setTimeout(function(){
-		$fsmActual.innerHTML = $this.innerHTML;
+        $fsmActual.innerHTML = $this.innerHTML;
 		var classes = $this.classList.value.split(' ');
 		for (var i = 0; i < classes.length; i++) {
 			$fsmActual.classList.add(classes[i]);
@@ -35,7 +41,7 @@ var openFSM = function(event) {
 		$fsmActual.classList.add('growing');
 		$fsmActual.style.height = '100vh';
 		$fsmActual.style.width = '100vw';
-		$fsmActual.style.top = '0';
+        $fsmActual.style.top = window.pageYOffset + 'px';
 		$fsmActual.style.left = '0';
 		$fsmActual.style.margin = '0';
 	}, 1);
@@ -45,6 +51,7 @@ var openFSM = function(event) {
 		$fsmActual.classList.add('full-screen')
 	}, 1000);
 };
+
 
 var closeFSM = function(event){
 	var $this = event.currentTarget;
